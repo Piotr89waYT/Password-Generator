@@ -11,14 +11,15 @@ import os
 def PasswordQuestion():
     print("Im going to ask you some questions. Answer them how ever you like, Keep in mind all your answers will affect your password and it's length.")
 
-    global word, rng, symbol, color, shape # Makes all the answers global
+    global word, rng, symbol, color, shape # Makes the answers global.
 
     word = input("Write down a word. It can be anything you like. Answer: ")                     # Word
     rng =  input("Write down a random number. Answer: ")                                         # Random Number
     symbol = input("Write down a special character or symbol. Answer: ")                         # Random Symbol
     color = input("write down a color, It can be your favourite or it can be random Answer: ")   # Color
     shape = input("Write down a shape, any shape Answer: ")                                      # Shape
-    return
+    
+    return 
 
 # Password Generator
 def PasswordGenerator():
@@ -38,7 +39,7 @@ def PasswordGenerator():
             f.write(str(GeneratedPassword))
     elif savePass == 'n':
         print("Ok, thank you for using my Password Generator.")
-    if os.path.exists("GeneratedPassword.txt"):
+        os.path.exists("GeneratedPassword.txt")
         os.remove("GeneratedPassword.txt")               # Will remove the GeneratedPassword.txt
     return
 
