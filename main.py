@@ -58,6 +58,7 @@ while True:
         print("Fantastic let's continue")
         PasswordQuestion()
         PasswordGenerator()
+        break
     elif make_password == 'n':
         print("Well Ok, Thanks for trying my program")
         break
