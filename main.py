@@ -39,8 +39,7 @@ def PasswordGenerator():
             f.write(str(GeneratedPassword))
     elif savePass == 'n':
         print("Ok, thank you for using my Password Generator.")
-        os.path.exists("GeneratedPassword.txt")
-        os.remove("GeneratedPassword.txt")               # Will remove the GeneratedPassword.txt
+        
     return
 
 
