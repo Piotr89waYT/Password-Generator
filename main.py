@@ -51,13 +51,15 @@ name = input("Hi, Whats your name?: ")                      # Asks the user what
 print(f"Hello {name}")                                      # Welcomes the User.
 
 # Make password? Question
-make_password = input("Do you want me to make you a password? (Y/N): ").strip().lower()
+while True:
+    make_password = input("Do you want me to make you a password? (Y/N): ").strip().lower()
 
-if make_password == 'y':
-    print("Fantastic let's continue")
-    PasswordQuestion()
-    PasswordGenerator()
-elif make_password == 'n':
-    print("Well Ok, Thanks for trying my program")
-else:
-    print("Please answer YES 'Y' or NO 'N'")
+    if make_password == 'y':
+        print("Fantastic let's continue")
+        PasswordQuestion()
+        PasswordGenerator()
+    elif make_password == 'n':
+        print("Well Ok, Thanks for trying my program")
+        break
+    else:
+        print("Please answer YES 'Y' or NO 'N'")
