@@ -3,7 +3,6 @@
 # Python Password Generator. It generates a Password for you bassed off a few user made inputs and then exports them into a text file.
 
 import random
-import os
 
 # BACK END
 
@@ -26,7 +25,7 @@ def PasswordGenerator():
     
     questions = [word, rng, symbol, color, shape]      # List with variables from questions.
     random.shuffle(questions)
-    GeneratedPassword= ''.join(questions)
+    GeneratedPassword = ''.join(questions)
     
     print("Your password is:", GeneratedPassword)     # Shows the password on screen.
 
@@ -36,7 +35,7 @@ def PasswordGenerator():
     if savePass == 'y':
         print("Saving password.")
         with open("GeneratedPassword.txt", "a") as f:           # After file generates it will add the content of the generated password into the file
-            f.write(str(GeneratedPassword))
+            f.write(GeneratedPassword)
     elif savePass == 'n':
         print("Ok, thank you for using my Password Generator.")
         
